@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('../fonts/Minecraftia-Regular.ttf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../images/bg2.png");
+    background-size: 100%;
+background-position: center;
+background-repeat: no-repeat;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.logo {
+    padding: 0;
+}
+
+.logo img {
+    width: 600px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+nav {
+    margin-top:-80px;
+    background-color: black; 
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    min-height: 60px;          
+}
+
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    flex-direction: row;      
+    flex-wrap: nowrap;        
+}
+
+.nav-menu li a {
+    font-family: 'Minecraftia', Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFA1EF;
+    text-decoration: none;
+}
+
+.nav-menu li a:hover {
+    color: #FF69B4;
+}
+
+
+main {
+    text-align: center;
+    padding: 50px;
+    flex: 1; 
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

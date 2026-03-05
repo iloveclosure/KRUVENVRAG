@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('../fonts/Minecraftia-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../images/bg2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+nav {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    min-height: 80px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    padding: 0 5%;
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+    display: block;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu li a {
+    font-family: 'Minecraftia', Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFA1EF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover, .nav-menu li a.active {
+    color: #FF69B4;
+}
+
+.nav-menu li a.active {
+    border-bottom: 2px solid #FF69B4;
+    padding-bottom: 5px;
+}
+
+
+main {
+    flex: 1;
+    padding: 140px 5% 60px 5%;
+}
+
+.page-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.page-logo img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+}
+
+.gun-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 80px; 
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center; 
+}
+
+.gun-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 4px solid black;
+    box-shadow: 15px 15px 0px rgba(0,0,0,0.4); 
+    display: block;
+}
+
+.small-img {
+    max-width: 300px !important;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.4) !important;
+}
+.text-block {
+    width: 100%;
+    max-width: 600px;
+    line-height: 2; 
+    font-size: 20px;
+    font-family: 'MS Mincho', "MS PMincho", serif;
+    color: #FBFAF5; 
+    text-align: center;
+    background: transparent;
+    padding: 10px;
+    text-shadow: 
+        2px 2px 0px #000, 
+        -1px -1px 0px #000,  
+         1px -1px 0px #000,
+        -1px  1px 0px #000,
+         1px  1px 0px #000;
+}
+
+
+.video-section {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.thumbnail-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 4px solid black;
+    box-shadow: 20px 20px 0px rgba(0,0,0,0.4);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.thumbnail-container img {
+    width: 100% !important;
+    max-width: none !important;
+    transition: transform 0.4s ease;
+    box-shadow: none;
+}
+
+.thumbnail-container:hover img {
+    transform: scale(1.03);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #FFA1EF;
+    text-shadow: 4px 4px 0px #000;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.video-link { text-decoration: none; }
+
+.video-caption {
+    font-family: 'Minecraftia', sans-serif;
+    color: #FFA1EF;
+    margin-top: 35px;
+    text-shadow: 2px 2px 0px #000;
+    font-size: 26px;
+    letter-spacing: 2px;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: black;
+    color: white;
+    font-family: 'Minecraftia', sans-serif;
+    font-size: 12px;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        min-height: auto;
+    }
+
+    .logo img { width: 180px; margin-bottom: 10px; }
+    .nav-menu { gap: 15px; padding-bottom: 10px; }
+
+    main { padding-top: 200px; }
+
+    .gun-container { gap: 50px; }
+    
+    .text-block { font-size: 18px; line-height: 1.6; }
+    
+    .video-caption { font-size: 18px; }
+
+    .thumbnail-container { box-shadow: 10px 10px 0px rgba(0,0,0,0.4); }
+}
